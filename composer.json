@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yangguanghui\\final\\": ""
+            "yangguanghui\\extFinal\\": ""
         }
     }
 }

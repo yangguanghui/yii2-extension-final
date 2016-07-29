@@ -1,6 +1,6 @@
 <?php
 
-namespace yangguanghui\final;
+namespace yangguanghui\extFinal;
 
 /**
  * This is just an example.
