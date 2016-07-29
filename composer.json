@@ -1,0 +1,21 @@
+{
+    "name": "yangguanghui/yii2-extension-final",
+    "description": "The easiest way to create your Yii2 application and with all features you exactly need.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "yangguanghui",
+            "email": "252699464@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yangguanghui\\final\\": ""
+        }
+    }
+}
