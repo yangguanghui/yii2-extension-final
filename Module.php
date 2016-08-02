@@ -129,6 +129,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
     protected function coreGenerators()
     {
         return [
+            'db' => ['class' => 'yangguanghui\extFinal\generators\db\Generator'],
             'model' => ['class' => 'yangguanghui\extFinal\generators\model\Generator'],
             'crud' => ['class' => 'yangguanghui\extFinal\generators\crud\Generator'],
             'controller' => ['class' => 'yangguanghui\extFinal\generators\controller\Generator'],
