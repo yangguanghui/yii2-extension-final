@@ -28,9 +28,6 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $sql = "CREATE DATABASE `test1` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
-        $ret = Yii::$app->db->createCommand($sql)->execute();
-        
         $this->layout = 'main';
     
         return $this->render('index');
