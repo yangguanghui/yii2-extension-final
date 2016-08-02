@@ -2,14 +2,14 @@
 use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
-/* @var $generators \yii\gii\Generator[] */
-/* @var $activeGenerator \yii\gii\Generator */
+/* @var $generators \yangguanghui\extFinal\Generator[] */
+/* @var $activeGenerator \yangguanghui\extFinal\Generator */
 /* @var $content string */
 
 $generators = Yii::$app->controller->module->generators;
 $activeGenerator = Yii::$app->controller->generator;
 ?>
-<?php $this->beginContent('@yii/gii/views/layouts/main.php'); ?>
+<?php $this->beginContent('@yangguanghui/extFinal/views/layouts/main.php'); ?>
 <div class="row">
     <div class="col-md-3 col-sm-4">
         <div class="list-group">

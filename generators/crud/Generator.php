@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\crud;
+namespace yangguanghui\extFinal\generators\crud;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -29,7 +29,7 @@ use yii\web\Controller;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class Generator extends \yii\gii\Generator
+class Generator extends \yangguanghui\extFinal\Generator
 {
     public $modelClass;
     public $controllerClass;

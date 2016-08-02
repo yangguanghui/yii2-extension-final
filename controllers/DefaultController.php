@@ -13,11 +13,11 @@ class DefaultController extends Controller
 {
     public $layout = 'generator';
     /**
-     * @var \yii\gii\Module
+     * @var \yangguanghui\extFinal\Module
      */
     public $module;
     /**
-     * @var \yii\gii\Generator
+     * @var \yangguanghui\extFinal\Generator
      */
     public $generator;
 
@@ -115,7 +115,7 @@ class DefaultController extends Controller
     /**
      * Loads the generator with the specified ID.
      * @param string $id the ID of the generator to be loaded.
-     * @return \yii\gii\Generator the loaded generator
+     * @return \yangguanghui\extFinal\Generator the loaded generator
      * @throws NotFoundHttpException
      */
     protected function loadGenerator($id)

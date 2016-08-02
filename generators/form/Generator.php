@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\form;
+namespace yangguanghui\extFinal\generators\form;
 
 use Yii;
 use yii\base\Model;
@@ -19,7 +19,7 @@ use yangguanghui\extFinal\CodeFile;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class Generator extends \yii\gii\Generator
+class Generator extends \yangguanghui\extFinal\Generator
 {
     public $modelClass;
     public $viewPath = '@app/views';

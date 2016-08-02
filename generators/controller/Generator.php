@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\controller;
+namespace yangguanghui\extFinal\generators\controller;
 
 use Yii;
 use yangguanghui\extFinal\CodeFile;
@@ -24,7 +24,7 @@ use yii\helpers\StringHelper;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class Generator extends \yii\gii\Generator
+class Generator extends \yangguanghui\extFinal\Generator
 {
     /**
      * @var string the controller class name

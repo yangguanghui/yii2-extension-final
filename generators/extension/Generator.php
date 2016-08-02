@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\extension;
+namespace yangguanghui\extFinal\generators\extension;
 
 use Yii;
 use yangguanghui\extFinal\CodeFile;
@@ -20,7 +20,7 @@ use yangguanghui\extFinal\CodeFile;
  * @author Tobias Munk <schmunk@usrbin.de>
  * @since 2.0
  */
-class Generator extends \yii\gii\Generator
+class Generator extends \yangguanghui\extFinal\Generator
 {
     public $vendorName;
     public $packageName = "yii2-";

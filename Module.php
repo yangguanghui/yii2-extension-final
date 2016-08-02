@@ -63,7 +63,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
             ], false);
         } elseif ($app instanceof \yii\console\Application) {
             $app->controllerMap[$this->id] = [
-                'class' => 'yii\gii\console\GenerateController',
+                'class' => 'yangguanghui\extFinal\console\GenerateController',
                 'generators' => array_merge($this->coreGenerators(), $this->generators),
                 'module' => $this,
             ];
@@ -129,12 +129,12 @@ class Module extends \yii\base\Module implements BootstrapInterface
     protected function coreGenerators()
     {
         return [
-            'model' => ['class' => 'yii\gii\generators\model\Generator'],
-            'crud' => ['class' => 'yii\gii\generators\crud\Generator'],
-            'controller' => ['class' => 'yii\gii\generators\controller\Generator'],
-            'form' => ['class' => 'yii\gii\generators\form\Generator'],
-            'module' => ['class' => 'yii\gii\generators\module\Generator'],
-            'extension' => ['class' => 'yii\gii\generators\extension\Generator'],
+            'model' => ['class' => 'yangguanghui\extFinal\generators\model\Generator'],
+            'crud' => ['class' => 'yangguanghui\extFinal\generators\crud\Generator'],
+            'controller' => ['class' => 'yangguanghui\extFinal\generators\controller\Generator'],
+            'form' => ['class' => 'yangguanghui\extFinal\generators\form\Generator'],
+            'module' => ['class' => 'yangguanghui\extFinal\generators\module\Generator'],
+            'extension' => ['class' => 'yangguanghui\extFinal\generators\extension\Generator'],
         ];
     }
 }

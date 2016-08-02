@@ -6,7 +6,7 @@ use yangguanghui\extFinal\components\ActiveField;
 use yangguanghui\extFinal\CodeFile;
 
 /* @var $this yii\web\View */
-/* @var $generator yii\gii\Generator */
+/* @var $generator yangguanghui\extFinal\Generator */
 /* @var $id string panel ID */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $results string */

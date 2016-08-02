@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yangguanghui\extFinal\CodeFile;
 
 /* @var $this \yii\web\View */
-/* @var $generator \yii\gii\Generator */
+/* @var $generator \yangguanghui\extFinal\Generator */
 /* @var $files CodeFile[] */
 /* @var $answers array */
 /* @var $id string panel ID */

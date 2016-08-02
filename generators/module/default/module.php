@@ -4,7 +4,7 @@
  */
 
 /* @var $this yii\web\View */
-/* @var $generator yii\gii\generators\module\Generator */
+/* @var $generator yangguanghui\extFinal\generators\module\Generator */
 
 $className = $generator->moduleClass;
 $pos = strrpos($className, '\\');

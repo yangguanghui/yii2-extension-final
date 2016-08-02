@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class GiiAsset extends AssetBundle
 {
-    public $sourcePath = '@yii/gii/assets';
+    public $sourcePath = '@yangguanghui/extFinal/assets';
     public $css = [
         'main.css',
     ];
@@ -28,6 +28,6 @@ class GiiAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'yii\gii\TypeAheadAsset',
+        'yangguanghui\extFinal\TypeAheadAsset',
     ];
 }
