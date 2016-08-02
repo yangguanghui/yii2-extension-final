@@ -8,7 +8,7 @@
 namespace yii\gii\generators\extension;
 
 use Yii;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 
 /**
  * This generator will generate the skeleton files needed by an extension.

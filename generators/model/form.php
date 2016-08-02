@@ -1,6 +1,6 @@
 <?php
 
-use yii\gii\generators\model\Generator;
+use yangguanghui\extFinal\generators\model\Generator;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */

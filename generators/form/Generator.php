@@ -9,7 +9,7 @@ namespace yii\gii\generators\form;
 
 use Yii;
 use yii\base\Model;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 
 /**
  * This generator will generate an action view file based on the specified model class.

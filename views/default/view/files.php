@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 
 /* @var $this \yii\web\View */
 /* @var $generator \yii\gii\Generator */

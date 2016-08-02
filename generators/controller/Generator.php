@@ -8,7 +8,7 @@
 namespace yii\gii\generators\controller;
 
 use Yii;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;

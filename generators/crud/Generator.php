@@ -11,7 +11,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\db\BaseActiveRecord;
 use yii\db\Schema;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 use yii\helpers\Inflector;
 use yii\helpers\VarDumper;
 use yii\web\Controller;

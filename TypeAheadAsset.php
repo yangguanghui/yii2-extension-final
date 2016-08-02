@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii;
+namespace yangguanghui\extFinal;
 
 use yii\web\AssetBundle;
 

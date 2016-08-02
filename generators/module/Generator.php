@@ -7,7 +7,7 @@
 
 namespace yii\gii\generators\module;
 
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\CodeFile;
 use yii\helpers\Html;
 use Yii;
 use yii\helpers\StringHelper;

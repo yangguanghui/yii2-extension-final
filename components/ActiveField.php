@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\components;
+namespace yangguanghui\extFinal\components;
 
-use yii\gii\Generator;
+use yangguanghui\extFinal\Generator;
 use yii\helpers\Json;
 
 /**

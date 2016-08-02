@@ -2,8 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\gii\components\ActiveField;
-use yii\gii\CodeFile;
+use yangguanghui\extFinal\components\ActiveField;
+use yangguanghui\extFinal\CodeFile;
 
 /* @var $this yii\web\View */
 /* @var $generator yii\gii\Generator */
