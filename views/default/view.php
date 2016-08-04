@@ -36,17 +36,8 @@ foreach ($generator->templates as $name => $path) {
                     'generator' => $generator,
                     'form' => $form,
                 ]) ?>
-                <?= $form->field($generator, 'template')->sticky()
-                    ->label('Code Template')
-                    ->dropDownList($templates)->hint('
-                        Please select which set of the templates should be used to generated the code.
-                ') ?>
                 <div class="form-group">
-                    <?= Html::submitButton('Preview', ['name' => 'preview', 'class' => 'btn btn-primary']) ?>
-
-                    <?php if (isset($files)): ?>
-                        <?= Html::submitButton('Generate', ['name' => 'generate', 'class' => 'btn btn-success']) ?>
-                    <?php endif; ?>
+                    <?= Html::submitButton('Save', ['name' => 'save', 'class' => 'btn btn-success']) ?>
                 </div>
             </div>
         </div>
@@ -57,13 +48,6 @@ foreach ($generator->templates as $name => $path) {
                 'generator' => $generator,
                 'results' => $results,
                 'hasError' => $hasError,
-            ]);
-        } elseif (isset($files)) {
-            echo $this->render('view/files', [
-                'id' => $id,
-                'generator' => $generator,
-                'files' => $files,
-                'answers' => $answers,
             ]);
         }
         ?>
