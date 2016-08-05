@@ -63,7 +63,7 @@ class Generator extends \yangguanghui\extFinal\Generator
         $string = \var_export($config, true);
         $arr = explode("\n",$string);
         $arr = array_slice($arr, 1, count($arr) - 2);
-        $arr = array_map(function($v) {return '         ' . $v;}, $arr);
+        $arr = array_map(function($v) {return '          ' . $v;}, $arr);
         $string = \implode("\n", $arr);
         $content = \file_get_contents($this->configFile);
         $data = preg_replace('/(\'db\' => \[\n).*?,(\n\ *\])/s',
