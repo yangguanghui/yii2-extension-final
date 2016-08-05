@@ -12,3 +12,6 @@ echo $form->field($generator, 'dbDriver')->dropDownList(
 echo $form->field($generator, 'dbHost');
 echo $form->field($generator, 'dbPort');
 echo $form->field($generator, 'dbName');
+echo $form->field($generator, 'username');
+echo $form->field($generator, 'password');
+echo $form->field($generator, 'charset');
