@@ -20,7 +20,6 @@ class Generator extends \yangguanghui\extFinal\Generator
     public $password;
     public $charset = 'utf8';
     public $dsn;
-    public $emptyDsn;
     /**
      * @var \yii\db\Connection a empty Connection object
      */
@@ -31,7 +30,7 @@ class Generator extends \yangguanghui\extFinal\Generator
         $this->configFile = Yii::getAlias($this->configFile);
     }
     
-    public function save(&$result) {
+    public function save($files, $answers, &$result) {
         $hasError = false;
         $lines = ["Begin connection..."];
         try {
@@ -43,7 +42,7 @@ class Generator extends \yangguanghui\extFinal\Generator
             $hasError = true;
         }
         $lines[] = "Save to file... ";
-        if (!$this->saveToFile()) {
+        if ($this->saveToFile() === false) {
             $lines[] = "Save error!";
         }
         $lines[] = "done!\n";
@@ -63,11 +62,11 @@ class Generator extends \yangguanghui\extFinal\Generator
     public function formatConfig($config) {
         $string = \var_export($config, true);
         $arr = explode("\n",$string);
-        $arr = array_slice($c, 1, count($arr) - 2);
+        $arr = array_slice($arr, 1, count($arr) - 2);
         $arr = array_map(function($v) {return '         ' . $v;}, $arr);
         $string = \implode("\n", $arr);
         $content = \file_get_contents($this->configFile);
-        $data = preg_replace('/(\'db\' => \[\n).*?(,\n\ *\])/s',
+        $data = preg_replace('/(\'db\' => \[\n).*?,(\n\ *\])/s',
             '$1' . $string . '$2',
             $content);
         return $data;
@@ -85,32 +84,29 @@ class Generator extends \yangguanghui\extFinal\Generator
         ];
     }
     
-    public function createDB(&$result) {
-        
-    }
-    
     public function executeCreateDB() {
-        $sql = "CREATE DATABASE `" . $this->dbName 
-            . "` DEFAULT CHARACTER SET ". $this->charset 
-            . "COLLATE " . $this->charset . "_general_ci";
+        $sql = "CREATE DATABASE IF NOT EXISTS `" . $this->dbName .
+            "` DEFAULT CHARACTER SET ". $this->charset .
+            " COLLATE " . $this->charset . "_general_ci";
         return $this->emptyConnection->createCommand($sql)->execute();
     }
     
     public function makeDsnEmptyString() {
-        $this->emptyDsn = $this->dbDriver 
+        return $this->dbDriver 
             . ":host=" . $this->dbHost 
-            . ";port=" . $this->dbPort;
+            . ";port=" . $this->dbPort
+            . ";dbname=";
     }
     
     public function makeDsnString() {
-        $this->dsn = $this->makeDsnEmptyString() . ";dbname=" . $this->dbName;
+        $this->dsn = $this->makeDsnEmptyString() . $this->dbName;
     }
     
     public function createEmptyConnection() {
         $con = new Connection();
         $con->dsn = $this->makeDsnEmptyString();
         $con->username = $this->username;
-        $con->password = $this->username;
+        $con->password = $this->password;
         $con->charset = $this->charset;
         $con->open();
         $this->emptyConnection = $con;
