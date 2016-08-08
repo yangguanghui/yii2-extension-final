@@ -35,8 +35,10 @@ class Generator extends \yangguanghui\extFinal\Generator
         $lines = ["Begin connection..."];
         try {
             $this->createEmptyConnection();
+            $lines = ["Connected"];
             $lines[] = "Begin create DB...";
             $this->executeCreateDB();
+            $lines[] = "Created";
         } catch (Exception $e) {
             $lines[] = $e->getMessage();
             $hasError = true;
@@ -44,9 +46,11 @@ class Generator extends \yangguanghui\extFinal\Generator
         $lines[] = "Save to file... ";
         if ($this->saveToFile() === false) {
             $lines[] = "Save error!";
+        }else{
+            $lines[] = "Save ok!";
         }
         $lines[] = "done!\n";
-        $result = \implode('\n', $lines);
+        $result = \implode("\n", $lines);
         return !$hasError;
     }
     
@@ -82,6 +86,15 @@ class Generator extends \yangguanghui\extFinal\Generator
             'password' => $this->password,
             'charset' => $this->charset,
         ];
+    }
+    
+    public function executeDropDB() {
+        $sql = "DROP DATABASE `" . $this->dbName . "`";
+//         $sql = "DROP DATABASE IF EXISTS `" . $this->dbName . "`";
+        if(empty($this->emptyConnection)){
+            $this->createEmptyConnection();
+        }
+        return $this->emptyConnection->createCommand($sql)->execute();
     }
     
     public function executeCreateDB() {
@@ -196,12 +209,8 @@ class Generator extends \yangguanghui\extFinal\Generator
      */
     public function successMessage()
     {
-        $code = highlight_string($this->render('action.php'), true);
-
         return <<<EOD
-<p>The form has been generated successfully.</p>
-<p>You may add the following code in an appropriate controller class to invoke the view:</p>
-<pre>$code</pre>
+<p>The DB has been generated successfully.</p>
 EOD;
     }
 

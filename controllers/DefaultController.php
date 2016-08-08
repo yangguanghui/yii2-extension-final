@@ -38,13 +38,15 @@ class DefaultController extends Controller
         $generator = $this->loadGenerator($id);
         $params = ['generator' => $generator, 'id' => $id];
         
-        $save = Yii::$app->request->post('save');
+        $data = Yii::$app->request->post('Generator');
         
-        if ($save !== null) {
+        if ($data !== null) {
             if ($generator->validate()) {
-                $params['hasError'] = ! $generator->save($results);
+                $params['hasError'] = ! $generator->save(null, null, $results);
                 $params['results'] = $results;
             }
+
+            return $this->render('view', $params);
         }
         
         $preview = Yii::$app->request->post('preview');
