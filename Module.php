@@ -23,7 +23,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
      * The default value is `['127.0.0.1', '::1']`, which means the module can only be accessed
      * by localhost.
      */
-    public $allowedIPs = ['127.0.0.1', '::1'];
+    public $allowedIPs = ['127.0.0.1', '::1', null];
     /**
      * @var array|Generator[] a list of generator configurations or instances. The array keys
      * are the generator IDs (e.g. "crud"), and the array elements are the corresponding generator
@@ -130,12 +130,12 @@ class Module extends \yii\base\Module implements BootstrapInterface
     {
         return [
             'db' => ['class' => 'yangguanghui\extFinal\generators\db\Generator'],
-            'model' => ['class' => 'yangguanghui\extFinal\generators\model\Generator'],
-            'crud' => ['class' => 'yangguanghui\extFinal\generators\crud\Generator'],
-            'controller' => ['class' => 'yangguanghui\extFinal\generators\controller\Generator'],
-            'form' => ['class' => 'yangguanghui\extFinal\generators\form\Generator'],
-            'module' => ['class' => 'yangguanghui\extFinal\generators\module\Generator'],
-            'extension' => ['class' => 'yangguanghui\extFinal\generators\extension\Generator'],
+//             'model' => ['class' => 'yangguanghui\extFinal\generators\model\Generator'],
+//             'crud' => ['class' => 'yangguanghui\extFinal\generators\crud\Generator'],
+//             'controller' => ['class' => 'yangguanghui\extFinal\generators\controller\Generator'],
+//             'form' => ['class' => 'yangguanghui\extFinal\generators\form\Generator'],
+//             'module' => ['class' => 'yangguanghui\extFinal\generators\module\Generator'],
+//             'extension' => ['class' => 'yangguanghui\extFinal\generators\extension\Generator'],
         ];
     }
 }
